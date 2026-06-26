@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" width="64" alt="OpenCode GO Usage">
+  <img src="opencode-go-usage@clrblind/files/opencode-go-usage@clrblind/icon.png" width="64" alt="OpenCode GO Usage">
 </p>
 
 <h1 align="center">OpenCode GO Usage</h1>
@@ -26,8 +26,7 @@ Shows an icon on the panel, stats in a popup menu on click, and supports notific
 ## Installation
 
 ```bash
-mkdir -p ~/.local/share/cinnamon/applets/opencode-go-usage@clrblind
-cp applet.js metadata.json settings-schema.json icon.png \
+cp -r opencode-go-usage@clrblind/files/opencode-go-usage@clrblind \
   ~/.local/share/cinnamon/applets/opencode-go-usage@clrblind
 ```
 
@@ -89,19 +88,19 @@ Notification fires **only** on transition >0 → 0. While limit stays at 0 — s
 
 | File | Purpose |
 |------|---------|
-| `applet.js` | Core logic |
-| `settings-schema.json` | Settings schema |
-| `metadata.json` | Applet metadata |
-| `icon.png` | Panel icon |
-| `stats.png` | Stats popup screenshot |
-| `settings.png` | Settings screenshot |
+| `files/…/applet.js` | Core logic |
+| `files/…/settings-schema.json` | Settings schema |
+| `files/…/metadata.json` | Applet metadata |
+| `files/…/icon.png` | Panel icon |
+| `info.json` | Author metadata |
+| `screenshot.png` | Applet screenshot |
 
 ## Tech Stack
 
 - **Language:** GJS (GNOME JavaScript, ES6)
 - **UI:** St (Cinnamon toolkit), Clutter, Pango
 - **Assembly:** `imports.ui.applet`, `GLib`, `Gio`
-- **Parsing:** curl + sed + awk
+- **Parsing:** curl + Gio.Subprocess + JS regex
 
 ## License
 
