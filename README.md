@@ -17,6 +17,8 @@
 
 ---
 
+> **[English version](README_EN.md)**
+
 Panel applet для Cinnamon, показывающий статус использования лимитов OpenCode **GO** подписки. Для OpenCode ZEN не подходит.
 
 Отображает иконку на панели, stats в popup-меню по клику, и поддерживает уведомления при сбросе лимитов.
@@ -108,5 +110,6 @@ GPL-3.0 © clrblind 2026
 ---
 
 <p align="center">
+  <a href="README_EN.md">English version</a> •
   <a href="https://github.com/clrblind/opencode-go-usage">GitHub</a>
 </p>
