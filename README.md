@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="opencode-go-usage@clrblind/files/opencode-go-usage@clrblind/icon.png" width="64" alt="OpenCode GO Usage">
+  <img src="icon.png" width="64" alt="OpenCode GO Usage">
 </p>
 
 <h1 align="center">OpenCode GO Usage</h1>
@@ -26,7 +26,8 @@ Panel applet для Cinnamon, показывающий статус исполь
 ## Установка
 
 ```bash
-cp -r opencode-go-usage@clrblind/files/opencode-go-usage@clrblind \
+mkdir -p ~/.local/share/cinnamon/applets/opencode-go-usage@clrblind
+cp applet.js metadata.json settings-schema.json icon.png \
   ~/.local/share/cinnamon/applets/opencode-go-usage@clrblind
 ```
 
@@ -88,19 +89,19 @@ Gio.Subprocess(argv) — curl https://opencode.ai/workspace/.../go
 
 | Файл | Назначение |
 |------|-----------|
-| `files/…/applet.js` | Основная логика |
-| `files/…/settings-schema.json` | Схема настроек |
-| `files/…/metadata.json` | Метаданные апплета |
-| `files/…/icon.png` | Иконка на панели |
-| `info.json` | Метаданные автора |
-| `screenshot.png` | Скриншот апплета |
+| `applet.js` | Основная логика |
+| `settings-schema.json` | Схема настроек |
+| `metadata.json` | Метаданные апплета |
+| `icon.png` | Иконка на панели |
+| `stats.png` | Скриншот stats popup |
+| `settings.png` | Скриншот настроек |
 
 ## Технологии
 
 - **Язык:** GJS (GNOME JavaScript, ES6)
 - **UI:** St (Cinnamon toolkit), Clutter, Pango
 - **Ассемблер:** `imports.ui.applet`, `GLib`, `Gio`
-- **Парсинг:** curl + Gio.Subprocess + JS regex
+- **Парсинг:** curl + sed + awk
 
 ## Лицензия
 
